@@ -1,0 +1,954 @@
+/* =========================================
+   RESET
+========================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f1f4f8;
+    color: #1f2937;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+button {
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+
+
+/* =========================================
+   MAIN CONTAINER
+========================================= */
+
+.dashboard-container {
+    display: flex;
+    min-height: 100vh;
+}
+
+
+/* =========================================
+   SIDEBAR
+========================================= */
+
+.sidebar {
+    width: 235px;
+    background: #ffffff;
+    border-right: 1px solid #e5e7eb;
+
+    display: flex;
+    flex-direction: column;
+
+    position: fixed;
+    left: 0;
+    top: 0;
+    bottom: 0;
+
+    z-index: 100;
+}
+
+
+/* LOGO */
+
+.sidebar-logo {
+    height: 88px;
+
+    display: flex;
+    align-items: center;
+
+    padding: 0 18px;
+}
+
+.sidebar-logo span {
+    width: 188px;
+    height: 58px;
+
+    border-radius: 10px;
+
+    background: #c5c5c5;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: white;
+    font-size: 15px;
+}
+
+
+/* MENU */
+
+.sidebar-menu {
+    padding: 25px 17px;
+}
+
+.menu-item {
+    height: 60px;
+
+    display: flex;
+    align-items: center;
+    gap: 15px;
+
+    padding: 0 18px;
+
+    border-radius: 9px;
+
+    margin-bottom: 12px;
+
+    color: #222;
+    font-size: 14px;
+
+    transition: 0.2s;
+}
+
+.menu-item svg {
+    width: 21px;
+    height: 21px;
+}
+
+.menu-item:hover {
+    background: #edf4ff;
+}
+
+.menu-item.active {
+    background: #287cf0;
+    color: white;
+    font-weight: 600;
+}
+
+
+/* SIDEBAR BOTTOM */
+
+.sidebar-bottom {
+    margin-top: auto;
+    padding: 25px 17px;
+    border-top: 1px solid #eeeeee;
+}
+
+.logout-btn {
+    height: 60px;
+
+    border-radius: 9px;
+
+    background: #ff1010;
+
+    color: white;
+
+    display: flex;
+    align-items: center;
+    gap: 13px;
+
+    padding: 0 20px;
+
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.logout-btn svg {
+    width: 20px;
+}
+
+
+/* =========================================
+   MAIN CONTENT
+========================================= */
+
+.main-content {
+    margin-left: 235px;
+
+    width: calc(100% - 235px);
+
+    min-height: 100vh;
+}
+
+
+/* =========================================
+   TOPBAR
+========================================= */
+
+.topbar {
+    height: 88px;
+
+    background: white;
+
+    border-bottom: 1px solid #e5e7eb;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding-left: 30px;
+}
+
+.topbar-right {
+    height: 100%;
+
+    display: flex;
+    align-items: center;
+}
+
+.notification-btn {
+    width: 70px;
+    height: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-left: 1px solid #eeeeee;
+}
+
+.notification-btn svg {
+    width: 23px;
+}
+
+
+.profile {
+    height: 100%;
+
+    display: flex;
+    align-items: center;
+    gap: 14px;
+
+    padding: 0 25px;
+
+    border-left: 1px solid #eeeeee;
+}
+
+.profile-name {
+    font-size: 13px;
+    color: #666;
+}
+
+.profile svg {
+    width: 22px;
+}
+
+
+/* =========================================
+   CONTENT
+========================================= */
+
+.content {
+    padding: 24px 25px;
+}
+
+
+/* =========================================
+   SCHOOL HEADER
+========================================= */
+
+.school-header {
+
+    min-height: 255px;
+
+    border-radius: 10px;
+
+    padding: 30px 32px;
+
+    background:
+        linear-gradient(
+            120deg,
+            #0866c9,
+            #069bc8
+        );
+
+    position: relative;
+
+    overflow: hidden;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    color: white;
+}
+
+
+/* BACKGROUND EFFECT */
+
+.school-header::before {
+    content: "";
+
+    position: absolute;
+
+    width: 600px;
+    height: 600px;
+
+    border: 1px solid rgba(255,255,255,0.08);
+
+    border-radius: 50%;
+
+    top: -350px;
+    left: 150px;
+}
+
+.school-header::after {
+    content: "";
+
+    position: absolute;
+
+    width: 500px;
+    height: 500px;
+
+    border: 1px solid rgba(255,255,255,0.07);
+
+    border-radius: 50%;
+
+    right: -200px;
+    bottom: -300px;
+}
+
+
+/* SCHOOL INFO */
+
+.school-info {
+    display: flex;
+    align-items: center;
+
+    gap: 25px;
+
+    z-index: 2;
+
+    max-width: 55%;
+}
+
+.school-logo {
+    width: 100px;
+    height: 100px;
+
+    flex-shrink: 0;
+
+    background: white;
+
+    border-radius: 12px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    overflow: hidden;
+}
+
+.school-logo img {
+    width: 82px;
+    height: 82px;
+
+    object-fit: contain;
+}
+
+.school-text h1 {
+    font-size: 25px;
+
+    margin-bottom: 8px;
+}
+
+.school-text p {
+    font-size: 15px;
+    line-height: 1.5;
+}
+
+.school-address {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.school-address svg {
+    width: 18px;
+    flex-shrink: 0;
+}
+
+.student-name {
+    margin-top: 7px;
+}
+
+
+/* =========================================
+   STAT CARDS
+========================================= */
+
+.school-stat {
+
+    display: flex;
+
+    gap: 20px;
+
+    z-index: 2;
+}
+
+
+.stat-card {
+
+    width: 220px;
+    height: 190px;
+
+    border-radius: 9px;
+
+    position: relative;
+
+    padding: 20px;
+
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+
+    box-shadow: 0 3px 10px rgba(0,0,0,0.04);
+}
+
+
+/* STUDENT */
+
+.student-card {
+    background: #fff7dc;
+    color: #e29a00;
+}
+
+
+/* TEACHER */
+
+.teacher-card {
+    background: #bfe5fb;
+    color: #1590df;
+}
+
+
+/* BADGE */
+
+.stat-badge {
+
+    position: absolute;
+
+    top: 15px;
+    right: 14px;
+
+    height: 31px;
+
+    padding: 0 12px;
+
+    border-radius: 7px;
+
+    display: flex;
+    align-items: center;
+    gap: 6px;
+
+    background: currentColor;
+
+    color: white;
+
+    font-size: 16px;
+
+    font-weight: 600;
+}
+
+.student-card .stat-badge {
+    background: #e49a00;
+}
+
+.teacher-card .stat-badge {
+    background: #1397e8;
+}
+
+.stat-badge svg {
+    width: 18px;
+}
+
+
+/* NUMBER */
+
+.stat-number {
+    font-size: 50px;
+
+    font-weight: 400;
+
+    margin-top: 20px;
+}
+
+
+/* TITLE */
+
+.stat-title {
+    font-size: 17px;
+
+    margin-top: 10px;
+
+    font-weight: 500;
+}
+
+
+/* =========================================
+   DASHBOARD GRID
+========================================= */
+
+.dashboard-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        minmax(0, 2.3fr)
+        minmax(300px, 0.9fr);
+
+    gap: 20px;
+
+    margin-top: 20px;
+}
+
+
+/* =========================================
+   CHART CARD
+========================================= */
+
+.chart-card {
+
+    background: white;
+
+    border-radius: 10px;
+
+    padding: 22px 25px;
+
+    min-height: 550px;
+
+    box-shadow:
+        0 2px 5px rgba(0,0,0,0.05);
+}
+
+
+.card-header {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    padding-bottom: 17px;
+
+    border-bottom: 1px solid #eeeeee;
+}
+
+.card-header h2 {
+    font-size: 17px;
+    color: #0569d4;
+}
+
+.card-header select {
+
+    border: none;
+
+    background: #f0f3f6;
+
+    padding: 9px 12px;
+
+    border-radius: 6px;
+
+    font-size: 12px;
+
+    color: #333;
+
+    outline: none;
+}
+
+
+/* CHART */
+
+.chart-wrapper {
+
+    position: relative;
+
+    height: 405px;
+
+    margin-top: 15px;
+}
+
+.chart-wrapper canvas {
+    width: 100% !important;
+    height: 100% !important;
+}
+
+
+/* LEGEND */
+
+.chart-legend {
+
+    display: flex;
+
+    gap: 30px;
+
+    border-top: 1px solid #eeeeee;
+
+    padding-top: 18px;
+
+    font-size: 13px;
+}
+
+.legend-item {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+}
+
+.legend-color {
+
+    width: 19px;
+    height: 19px;
+
+    border-radius: 3px;
+}
+
+.legend-color.blue {
+    background: #2179ed;
+}
+
+.legend-color.gray {
+    background: #d9dee3;
+}
+
+
+/* =========================================
+   RIGHT COLUMN
+========================================= */
+
+.right-column {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 20px;
+}
+
+
+/* =========================================
+   CALENDAR
+========================================= */
+
+.calendar-card {
+
+    background: white;
+
+    border-radius: 10px;
+
+    padding: 17px;
+
+    min-height: 270px;
+}
+
+.calendar-header {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    margin-bottom: 17px;
+}
+
+.calendar-header h2 {
+
+    font-size: 15px;
+
+    color: #0867d0;
+}
+
+.calendar-header button {
+
+    width: 25px;
+    height: 25px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: #8ba0b5;
+}
+
+.calendar-header svg {
+    width: 17px;
+}
+
+
+/* WEEK */
+
+.calendar-week,
+.calendar-days {
+
+    display: grid;
+
+    grid-template-columns: repeat(7, 1fr);
+
+    text-align: center;
+}
+
+.calendar-week {
+
+    font-size: 11px;
+
+    font-weight: 600;
+
+    margin-bottom: 8px;
+}
+
+.calendar-days {
+
+    row-gap: 5px;
+}
+
+.calendar-day {
+
+    height: 31px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    font-size: 11px;
+
+    border-radius: 50%;
+}
+
+.calendar-day.muted {
+    color: #aeb8c2;
+}
+
+.calendar-day.today {
+
+    background: #247df0;
+
+    color: white;
+
+    width: 31px;
+
+    margin: auto;
+}
+
+.calendar-day.highlight {
+
+    background: #e6f3ff;
+
+    color: #1684e5;
+
+    width: 31px;
+
+    margin: auto;
+}
+
+
+/* =========================================
+   ACTIVITY
+========================================= */
+
+.activity-card {
+
+    background: white;
+
+    border-radius: 10px;
+
+    padding: 20px;
+
+    flex: 1;
+}
+
+.activity-card h2 {
+
+    color: #0867d0;
+
+    font-size: 17px;
+
+    margin-bottom: 20px;
+}
+
+
+.activity-item {
+
+    display: flex;
+
+    gap: 13px;
+
+    margin-bottom: 19px;
+}
+
+.activity-item:last-child {
+    margin-bottom: 0;
+}
+
+
+.activity-icon {
+
+    width: 36px;
+    height: 36px;
+
+    flex-shrink: 0;
+
+    border-radius: 50%;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+}
+
+.activity-icon svg {
+    width: 17px;
+}
+
+.activity-icon.red {
+    background: #ffe1e1;
+    color: #ed5555;
+}
+
+.activity-icon.blue {
+    background: #e3f1ff;
+    color: #1681df;
+}
+
+.activity-icon.yellow {
+    background: #fff4cf;
+    color: #e8ad00;
+}
+
+
+.activity-content {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 4px;
+}
+
+.activity-content strong {
+
+    font-size: 12px;
+
+    color: #222;
+}
+
+.activity-content span {
+
+    font-size: 10px;
+
+    line-height: 1.45;
+
+    color: #5e6874;
+}
+
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 1200px) {
+
+    .school-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 25px;
+    }
+
+    .school-info {
+        max-width: 100%;
+    }
+
+    .school-stat {
+        width: 100%;
+    }
+
+    .stat-card {
+        flex: 1;
+    }
+
+}
+
+
+@media (max-width: 950px) {
+
+    .sidebar {
+        width: 80px;
+    }
+
+    .main-content {
+        margin-left: 80px;
+        width: calc(100% - 80px);
+    }
+
+    .sidebar-logo span {
+        width: 45px;
+        font-size: 10px;
+    }
+
+    .menu-item span,
+    .logout-btn span {
+        display: none;
+    }
+
+    .menu-item,
+    .logout-btn {
+        justify-content: center;
+        padding: 0;
+    }
+
+    .dashboard-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .right-column {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+}
+
+
+@media (max-width: 650px) {
+
+    .content {
+        padding: 15px;
+    }
+
+    .school-info {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .school-text h1 {
+        font-size: 21px;
+    }
+
+    .school-stat {
+        flex-direction: column;
+    }
+
+    .stat-card {
+        width: 100%;
+    }
+
+    .right-column {
+        grid-template-columns: 1fr;
+    }
+
+    .chart-card {
+        min-height: 480px;
+    }
+
+    .chart-wrapper {
+        height: 330px;
+    }
+
+}

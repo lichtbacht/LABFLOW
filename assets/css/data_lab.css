@@ -1,0 +1,872 @@
+/* =========================================
+   RESET
+========================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+
+    background: #f1f4f8;
+
+    color: #1f2937;
+}
+
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+
+button {
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+
+
+
+/* =========================================
+   CONTAINER
+========================================= */
+
+.dashboard-container {
+
+    display: flex;
+
+    min-height: 100vh;
+}
+
+
+
+/* =========================================
+   SIDEBAR
+   SAMA DENGAN DASHBOARD
+========================================= */
+
+.sidebar {
+    width: 235px;
+    background: #ffffff;
+    border-right: 1px solid #e5e7eb;
+
+    display: flex;
+    flex-direction: column;
+
+    position: fixed;
+    left: 0;
+    top: 0;
+    bottom: 0;
+
+    z-index: 100;
+}
+
+
+
+/* =========================================
+   LOGO
+========================================= */
+
+.sidebar-logo {
+
+    height: 88px;
+
+    display: flex;
+
+    align-items: center;
+
+    padding: 0 18px;
+}
+
+
+.sidebar-logo span {
+    width: 188px;
+    height: 58px;
+
+    border-radius: 10px;
+
+    background: #c5c5c5;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: white;
+    font-size: 15px;
+}
+
+
+
+/* =========================================
+   SIDEBAR MENU
+========================================= */
+
+.sidebar-menu {
+    padding: 25px 17px;
+}
+
+.menu-item {
+    height: 60px;
+
+    display: flex;
+    align-items: center;
+    gap: 15px;
+
+    padding: 0 18px;
+
+    border-radius: 9px;
+
+    margin-bottom: 12px;
+
+    color: #222;
+    font-size: 14px;
+
+    transition: 0.2s;
+}
+
+.menu-item svg {
+    width: 21px;
+    height: 21px;
+}
+
+.menu-item:hover {
+    background: #edf4ff;
+}
+
+.menu-item.active {
+    background: #287cf0;
+    color: white;
+    font-weight: 600;
+}
+
+
+
+/* =========================================
+   SIDEBAR BOTTOM
+========================================= */
+
+.sidebar-bottom {
+
+    margin-top: auto;
+
+    padding: 25px 17px;
+
+    border-top: 1px solid #eeeeee;
+}
+
+
+.logout-btn {
+
+    height: 60px;
+
+    border-radius: 9px;
+
+    background: #ff1010;
+
+    color: white;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 13px;
+
+    padding: 0 20px;
+
+    font-size: 14px;
+
+    font-weight: 600;
+}
+
+
+.logout-btn svg {
+
+    width: 20px;
+}
+
+
+
+/* =========================================
+   MAIN CONTENT
+========================================= */
+
+.main-content {
+
+    margin-left: 235px;
+
+    width: calc(100% - 235px);
+
+    min-height: 100vh;
+}
+
+
+
+/* =========================================
+   TOPBAR
+========================================= */
+
+.topbar {
+
+    height: 88px;
+
+    background: white;
+
+    border-bottom: 1px solid #e5e7eb;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+}
+
+
+.topbar-left {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    padding-left: 25px;
+}
+
+
+
+/* =========================================
+   SEARCH
+========================================= */
+
+.search-box {
+
+    width: 260px;
+
+    height: 34px;
+
+    background: #eef0f2;
+
+    border-radius: 9px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    padding: 0 11px;
+}
+
+
+.search-box svg {
+
+    width: 15px;
+
+    color: #555;
+}
+
+
+.search-box input {
+
+    width: 100%;
+
+    border: none;
+
+    outline: none;
+
+    background: transparent;
+
+    font-size: 12px;
+}
+
+
+.search-box input::placeholder {
+
+    color: #777;
+}
+
+
+
+/* =========================================
+   FILTER
+========================================= */
+
+.filter-box {
+
+    width: 110px;
+
+    height: 34px;
+
+    background: #eef0f2;
+
+    border-radius: 9px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 6px;
+
+    padding: 0 10px;
+}
+
+
+.filter-box svg {
+
+    width: 14px;
+}
+
+
+.filter-box select {
+
+    width: 100%;
+
+    border: none;
+
+    outline: none;
+
+    background: transparent;
+
+    font-size: 11px;
+
+    cursor: pointer;
+}
+
+
+
+/* =========================================
+   TOP RIGHT
+========================================= */
+
+.topbar-right {
+
+    height: 100%;
+
+    display: flex;
+
+    align-items: center;
+}
+
+
+.notification-btn {
+
+    width: 70px;
+
+    height: 100%;
+
+    border-left: 1px solid #eeeeee;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+}
+
+
+.notification-btn svg {
+
+    width: 23px;
+}
+
+
+.profile {
+
+    height: 100%;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 14px;
+
+    padding: 0 25px;
+
+    border-left: 1px solid #eeeeee;
+}
+
+
+.profile span {
+
+    font-size: 13px;
+
+    color: #666;
+}
+
+
+.profile svg {
+
+    width: 22px;
+}
+
+
+
+/* =========================================
+   CONTENT
+========================================= */
+
+.content {
+
+    padding: 24px 25px;
+}
+
+
+
+/* =========================================
+   PAGE HEADER
+========================================= */
+
+.page-header {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    margin-bottom: 23px;
+}
+
+
+.page-header h1 {
+
+    font-size: 20px;
+
+    color: #111;
+
+    margin-bottom: 5px;
+}
+
+
+.page-header p {
+
+    font-size: 13px;
+
+    color: #777;
+}
+
+
+
+/* =========================================
+   HISTORY
+========================================= */
+
+.history-btn {
+
+    height: 36px;
+
+    padding: 0 13px;
+
+    background: white;
+
+    border: 1px solid #e1e5e9;
+
+    border-radius: 8px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 7px;
+
+    font-size: 12px;
+
+    font-weight: 600;
+
+    transition: 0.2s;
+}
+
+
+.history-btn:hover {
+
+    background: #f5f7f9;
+}
+
+
+.history-btn svg {
+
+    width: 15px;
+}
+
+
+
+/* =========================================
+   LAB GRID
+========================================= */
+
+.lab-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, minmax(0, 1fr));
+
+    gap: 28px 34px;
+}
+
+
+
+/* =========================================
+   LAB CARD
+========================================= */
+
+.lab-card {
+
+    height: 125px;
+
+    border-radius: 8px;
+
+    overflow: hidden;
+
+    position: relative;
+
+    background-image: url("lab.jpg");
+
+    background-size: cover;
+
+    background-position: center;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 2px 5px rgba(0, 0, 0, 0.12);
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+
+
+/* OVERLAY */
+
+.lab-card::after {
+
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    background:
+        linear-gradient(
+            to bottom,
+            rgba(255,255,255,0.15),
+            rgba(0,0,0,0.25)
+        );
+
+    z-index: 1;
+}
+
+
+
+/* =========================================
+   HOVER CARD
+========================================= */
+
+.lab-card:hover {
+
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 8px 18px rgba(0,0,0,0.16);
+}
+
+
+
+/* =========================================
+   LAB NAME
+========================================= */
+
+.lab-name {
+
+    position: absolute;
+
+    top: 11px;
+
+    left: 13px;
+
+    z-index: 2;
+
+    color: #111;
+
+    font-size: 16px;
+
+    font-weight: 700;
+
+    text-shadow:
+        0 1px 3px rgba(255,255,255,0.9);
+}
+
+
+
+/* =========================================
+   STATUS
+========================================= */
+
+.lab-status {
+
+    position: absolute;
+
+    top: 11px;
+
+    right: 10px;
+
+    z-index: 2;
+
+    height: 27px;
+
+    padding: 0 10px;
+
+    border-radius: 6px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 6px;
+
+    font-size: 12px;
+
+    font-weight: 600;
+
+    backdrop-filter: blur(5px);
+}
+
+
+.status-dot {
+
+    width: 8px;
+
+    height: 8px;
+
+    border-radius: 50%;
+}
+
+
+
+/* ACTIVE */
+
+.lab-status.active {
+
+    background: rgba(210, 244, 210, 0.92);
+
+    color: #315c31;
+}
+
+
+.lab-status.active .status-dot {
+
+    background: #25c42d;
+}
+
+
+
+/* MAINTENANCE */
+
+.lab-status.maintenance {
+
+    background: rgba(255, 244, 180, 0.92);
+
+    color: #504d1b;
+}
+
+
+.lab-status.maintenance .status-dot {
+
+    background: #f1ce21;
+}
+
+
+
+/* =========================================
+   FLOOR
+========================================= */
+
+.lab-floor {
+
+    position: absolute;
+
+    right: 13px;
+
+    bottom: 14px;
+
+    z-index: 2;
+
+    color: #222;
+
+    font-size: 12px;
+
+    text-shadow:
+        0 1px 3px rgba(255,255,255,0.9);
+}
+
+
+
+/* =========================================
+   EMPTY STATE
+========================================= */
+
+.empty-state {
+
+    display: none;
+
+    min-height: 250px;
+
+    background: white;
+
+    border-radius: 10px;
+
+    align-items: center;
+
+    justify-content: center;
+
+    flex-direction: column;
+
+    text-align: center;
+}
+
+
+.empty-state.show {
+
+    display: flex;
+}
+
+
+.empty-state svg {
+
+    width: 40px;
+
+    height: 40px;
+
+    margin-bottom: 10px;
+
+    color: #999;
+}
+
+
+.empty-state h3 {
+
+    font-size: 15px;
+
+    margin-bottom: 5px;
+}
+
+
+.empty-state p {
+
+    font-size: 12px;
+
+    color: #777;
+}
+
+
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 1000px) {
+
+    .school-stat {
+        flex-direction: column;
+    }
+
+}
+
+
+@media (max-width: 900px) {
+
+    .sidebar {
+
+        width: 80px;
+    }
+
+
+    .main-content {
+
+        margin-left: 80px;
+
+        width: calc(100% - 80px);
+    }
+
+
+    .sidebar-logo {
+
+        justify-content: center;
+
+        padding: 0;
+    }
+
+
+    .sidebar-logo span {
+
+        width: 45px;
+
+        font-size: 10px;
+    }
+
+
+    .menu-item {
+
+        justify-content: center;
+
+        padding: 0;
+    }
+
+
+    .menu-item span,
+    .logout-btn span {
+
+        display: none;
+    }
+
+
+    .menu-item,
+    .logout-btn {
+
+        justify-content: center;
+
+        padding: 0;
+    }
+
+
+    .lab-grid {
+
+        grid-template-columns: 1fr;
+    }
+
+}
+
+
+@media (max-width: 650px) {
+
+    .content {
+
+        padding: 15px;
+    }
+
+
+    .search-box {
+
+        width: 180px;
+    }
+
+
+    .filter-box {
+
+        width: 90px;
+    }
+
+
+    .profile span {
+
+        display: none;
+    }
+
+}

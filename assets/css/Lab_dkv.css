@@ -1,0 +1,234 @@
+.lab-layout-container {
+    background: #f1f4f8;
+    padding: 30px;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.lab-floor {
+    background: #ffffff;
+    width: 100%;
+    max-width: 1200px;
+    border-radius: 24px;
+    padding: 40px;
+    position: relative;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04);
+}
+
+.top-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+.btn-maintenance {
+    background: #fff9c4;
+    color: #f57f17;
+    border: 1px solid #fff59d;
+    padding: 10px 20px;
+    border-radius: 10px;
+    font-size: 14px;
+    font-weight: 700;
+    cursor: pointer;
+    box-shadow: 0 2px 6px rgba(245, 127, 23, 0.1);
+    transition: all 0.2s;
+}
+
+.btn-maintenance:hover {
+    background: #fff59d;
+    transform: translateY(-2px);
+}
+
+.whiteboard {
+    background: #f8fafc;
+    border: 2px dashed #cbd5e1;
+    padding: 12px 60px;
+    border-radius: 10px;
+    font-weight: 800;
+    color: #64748b;
+    font-size: 15px;
+    letter-spacing: 1.5px;
+}
+
+.network-gear {
+    color: #0284c7;
+    background: #e0f2fe;
+    padding: 8px 14px;
+    border-radius: 8px;
+    font-size: 12px;
+    font-weight: bold;
+    text-align: center;
+    border: 1px solid #bae6fd;
+}
+
+.projector-area {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 35px;
+}
+
+.projector-beams {
+    width: 100px;
+    height: 45px;
+    clip-path: polygon(30% 0%, 70% 0%, 100% 100%, 0% 100%);
+    background: linear-gradient(to bottom, rgba(56, 189, 248, 0.4), rgba(224, 242, 254, 0.1));
+}
+
+.projector-label {
+    background: #0284c7;
+    padding: 6px 18px;
+    border-radius: 20px;
+    font-size: 12px;
+    color: #ffffff;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+    box-shadow: 0 4px 10px rgba(2, 132, 199, 0.25);
+}
+
+/* PC Grid Layout */
+.pc-grid-layout {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    align-items: stretch;
+}
+
+/* PC Cards */
+.pc-station {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: #ffffff;
+    border: 2px solid #e2e8f0;
+    border-radius: 14px;
+    padding: 14px 18px;
+    cursor: pointer;
+    transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+    min-width: 80px;
+}
+
+.pc-station:hover {
+    transform: translateY(-4px) scale(1.03);
+    border-color: #3b82f6;
+    box-shadow: 0 10px 20px -3px rgba(59, 130, 246, 0.2);
+}
+
+.pc-tag {
+    font-size: 12px;
+    font-weight: 700;
+    padding: 4px 10px;
+    border-radius: 6px;
+    margin-bottom: 8px;
+    letter-spacing: 0.5px;
+}
+
+.pc-tag.blue { 
+    background: #eff6ff; 
+    color: #2563eb; 
+    border: 1px solid #dbeafe;
+}
+
+.pc-tag.pink { 
+    background: #fdf2f8; 
+    color: #db2777; 
+    border: 1px solid #fce7f3;
+}
+
+.pc-icon {
+    width: 48px;
+    height: 48px;
+    stroke-width: 1.8;
+    color: #334155;
+    transition: color 0.2s;
+}
+
+.pc-station:hover .pc-icon {
+    color: #2563eb;
+}
+
+/* Center Block */
+.pc-center-block {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    flex-grow: 1;
+    align-items: center;
+}
+
+.pc-row {
+    display: flex;
+    gap: 16px;
+    width: 100%;
+    justify-content: center;
+}
+
+.pc-row .pc-station {
+    flex: 1;
+    max-width: 110px;
+    height: 90px;
+}
+
+/* Side Columns */
+.side-column {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    justify-content: space-between;
+}
+
+.side-column .pc-station {
+    height: 90px;
+    width: 95px;
+}
+
+/* Header & Topbar Custom */
+.topbar-left {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.back-btn {
+    background: #0f172a;
+    color: #ffffff;
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.back-btn:hover {
+    background: #334155;
+}
+
+.status-badge {
+    background: #dcfce7;
+    color: #15803d;
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-size: 13px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: 700;
+}
+
+.status-badge .dot {
+    width: 8px;
+    height: 8px;
+    background: #22c55e;
+    border-radius: 50%;
+    box-shadow: 0 0 0 3px rgba(34, 197, 94, 0.2);
+}
